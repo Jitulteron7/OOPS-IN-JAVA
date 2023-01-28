@@ -50,6 +50,23 @@ package FractionPackage;
 
     private void simplify() {
         // private function to convert the fraction into its standard form
+
+        int num =2;
+
+
+        while(num <=Math.min(this.numerator,this.denominator)){
+              if(this.numerator%num==0 && this.denominator%num==0){
+
+                  this.numerator /= num;
+                  this.denominator /= num;
+              }
+
+              if(this.numerator%num!=0 || this.denominator%num!=0){
+                  num++;
+
+              }
+
+        }
     }
 
     public static Fraction add(Fraction f1, Fraction f2) {
